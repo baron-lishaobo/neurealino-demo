@@ -13,7 +13,8 @@ import {Tabs,
     Row,
     Col,
     Menu,
-    MenuItem
+    MenuItem,
+    Divider
 } from 'ant-design-vue'
 const app= createApp(App)
 app.use(Tabs)
@@ -28,5 +29,8 @@ app.use(Tabs)
 .use(Button)
 .use(Row)
 .use(Col)
+.use(Divider)
 .mount('#app')
 window.Neutralino.init();
+
+
