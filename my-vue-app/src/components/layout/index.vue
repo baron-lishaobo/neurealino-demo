@@ -19,7 +19,11 @@
         <a-layout-content class="content">
             <router-view/>
         </a-layout-content>
-        <a-layout-footer class="footer">Footer</a-layout-footer>
+        <a-layout-footer class="footer">
+            <div class="platform">
+                {{$q.platform.userAgent}}
+            </div>
+        </a-layout-footer>
   </a-layout>
 </template>
 
@@ -27,11 +31,13 @@
  import { ref } from 'vue';
  import { useRoute,useRouter } from 'vue-router';
  import DigitalClock from '../clock/DigitalClock.vue'
+ import { useQuasar } from 'quasar';
 const route=useRoute();
 const router=useRouter();
 const op=ref(null);
 const pl=ref(null);
 const cp=ref(null);
+const $q=useQuasar();
 function go(path:string){
     router.push(path);
 }
