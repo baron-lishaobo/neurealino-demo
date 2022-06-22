@@ -1,5 +1,5 @@
 {
-  "applicationId": "js.neutralino.zero",
+  "applicationId": "dsm-tool",
   "version": "1.0.0",
   "defaultMode": "window",
   "documentRoot": "/my-vue-app/dist",
@@ -11,16 +11,18 @@
   ],
   "modes": {
     "window": {
-      "title": "neu-pro",
+      "title": "Dsm tool",
       "width": 800,
       "height": 500,
       "minWidth": 400,
       "minHeight": 200,
-      "icon": "/my-vue-app/public/favicon.ico"
+      "icon": "/my-vue-app/public/logo.ico",
+      "enableInspector":false,
+      "port":3001
     }
   },
   "cli": {
-    "binaryName": "neu-pro",
+    "binaryName": "dsm-tool",
     "resourcesPath": "/my-vue-app/dist",
     "extensionsPath": "/extensions/",
     "clientLibrary": "/my-vue-app/public/neutralino.js",

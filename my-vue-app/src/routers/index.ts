@@ -7,24 +7,40 @@ export const  router=createRouter({
         {
             path:'/',
             component:DsmLayout,
+            meta:{
+                title:'Home Page'
+            },
             redirect:'operations',
             children:[
                 {
-                    path:'ops',
+                    path:'operations',
+                    meta:{
+                        title:'Operations'
+                    },
                     name:'Operation List',
                     component:()=>import('@/views/dsm/Operations.vue')
                 },
                 {
                     path:'product-label',
                     name:'Product Label',
+                    meta:{
+                        title:'Product Label'
+                    },
                     component:()=>import('@/views/dsm/ProductLabel.vue')
                 }
                 ,{
                     path:'components',
                     name:'Components',
+                    meta:{
+                        title:'Components'
+                    },
                     component:()=>import('@/views/dsm/Components.vue')
                 }
             ]
+        },
+        {
+            path:"/:catchAll(.*)",
+            component:()=>import('@/views/exceptions/404.vue')
         },
        {
         path:'/ops',

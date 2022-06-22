@@ -2,7 +2,7 @@ import { createApp} from 'vue'
 import { Quasar } from 'quasar'
 import App from './App.vue'
 import 'ant-design-vue/dist/antd.css';
-import {  router } from './routers';
+import   router  from './routers/intercept';
 // Import icon libraries
 import '@quasar/extras/material-icons/material-icons.css'
 import '@quasar/extras/fontawesome-v5/fontawesome-v5.css'
